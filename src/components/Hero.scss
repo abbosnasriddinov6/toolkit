@@ -139,6 +139,62 @@
                         letter-spacing: 0em;
                         text-align: center;
                         color: white;
+
+                        .editdelete {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 5px;
+                        }
+
+                        .button2 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            background-color: blue;
+                            border: none;
+                            width: 40px;
+                            height: 30px;
+                            font-family: 'Raleway', sans-serif;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 15px;
+                            letter-spacing: 0em;
+                            text-align: center;
+
+                            img {
+                                width: 60px;
+                            }
+                        }
+
+                        .button1 {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                            background-color: red;
+                            border: none;
+                            width: 40px;
+                            height: 30px;
+                            font-family: 'Raleway', sans-serif;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 400;
+                            line-height: 15px;
+                            letter-spacing: 0em;
+                            text-align: center;
+
+                            img {
+                                width: 60px;
+                            }
+
+                        }
                     }
                 }
             }
@@ -153,6 +209,123 @@
     justify-content: center;
     width: 100%;
     height: 15%;
+}
 
+.modal {
 
+    .inputandselect {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+
+        .git {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 60px;
+
+            .email {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                }
+
+                input {
+                    width: 200px;
+                    height: 40px;
+                    padding: 20px;
+                    outline: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    border: 2px solid blue;
+                }
+            }
+
+            .last {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                }
+
+                select {
+                    width: 200px;
+                    height: 45px;
+                    padding: 10px 10px;
+                    outline: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 14px;
+                    color: black;
+                    font-weight: 400;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    border: 2px solid blue;
+                }
+            }
+        }
+
+        .hit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            .name {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                }
+
+                input {
+                    width: 200px;
+                    height: 40px;
+                    padding: 20px;
+                    outline: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    border: 2px solid blue;
+                }
+            }
+
+            .username {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                h3 {
+                    font-family: 'Raleway', sans-serif;
+                }
+
+                input {
+                    width: 200px;
+                    height: 40px;
+                    padding: 20px;
+                    outline: none;
+                    font-family: 'Raleway', sans-serif;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 15px;
+                    letter-spacing: 0em;
+                    border: 2px solid blue;
+                }
+            }
+        }
+    }
 }

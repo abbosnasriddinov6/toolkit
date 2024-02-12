@@ -13,6 +13,28 @@ export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
         .then((str) => str.data)
         .catch((error) => error.message);
 });
+export const postUsers = createAsyncThunk('user/postUsers', (user) => {
+    return axios
+        .post('http://localhost:3000/users', user, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        })
+        .then((res) => res.data)
+        .catch((err) => err.message);
+});
+
+
+
+export const deleteUsers = createAsyncThunk('user/deleteUsers', async (id, { rejectWithValue }) => {
+    try {
+        await axios.delete(`http://localhost:3000/users/${id && id}`)
+    } catch (error) {
+        return rejectWithValue(error.message)
+    }
+});
+
+
 
 const userSlice = createSlice({
     name: 'user',
@@ -31,6 +53,31 @@ const userSlice = createSlice({
             state.users = [];
             state.error = action.payload
         });
+        developer.addCase(postUsers.pending, (state) => {
+            state.loading = true;
+            state.error = null;
+        });
+        developer.addCase(postUsers.fulfilled, (state, action) => {
+            state.loading = false;
+            state.users = action.payload;
+        });
+        developer.addCase(postUsers.rejected, (state, action) => {
+            state.loading = false;
+            state.users = [];
+            state.error = action.error.payload;
+        });
+        developer.addCase(deleteUsers.pending, (state) => {
+            state.loading = true;
+            state.error = null;
+        });
+        developer.addCase(deleteUsers.fulfilled, (state) => {
+            state.loading = false;
+        });
+        developer.addCase(deleteUsers.rejected, (state, action) => {
+            state.loading = false;
+            state.error = action.payload;
+        });
+
     }
 })
 

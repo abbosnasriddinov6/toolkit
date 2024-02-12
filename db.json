@@ -1,74 +1,18 @@
 {
-    "users": [
-        {
-      "id": "1",
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "group": "BACKEND"
+  "users": [
+    {
+      "id": "d786",
+      "name": "Akobir Maxmaraimov",
+      "username": "akobirjon",
+      "email": "akobir003@gmail.com",
+      "group": "FRONTEND"
     },
-        {
-      "id": "2",
+    {
+      "id": "89a0",
       "name": "Abbosbek Nasriddinov",
-      "username": "abbosbek",
-      "email": "abbosbeknasriddinov001@gmail.com",
-      "group": "FRONTEND"
-    },
-        {
-      "id": "3",
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "husaynhamdamov002@gmail.com",
-      "group": "FRONTEND"
-    },
-        {
-      "id": "4",
-      "name": "Shohislom",
-      "username": "Shoh",
-      "email": "Shohdeveloper@gmail.com",
-      "group": "FRONTEND"
-    },
-        {
-      "id": "5",
-      "name": "Xurshidbek Ergasheev",
-      "username": "xurshidboy",
-      "email": "khurshid01@gmail.com",
-      "group": "IELTS"
-    },
-        {
-      "id": "6",
-      "name": "Azizbek Abdullajonov",
-      "username": "abdullajonov",
-      "email": "abdullajonov004@gmail.com",
-      "group": "IELTS"
-    },
-        {
-      "id": "7",
-      "name": "Qodirov Otabek",
-      "username": "deffen",
-      "email": "qodirovotabek@gmail.com",
-      "group": "IELTS"
-    },
-        {
-      "id": "8",
-      "name": "Sunnatilla Solijonov",
-      "username": "sunnatbe",
-      "email": "sunnatbek@gmail.com",
-      "group": "BACKEND"
-    },
-        {
-      "id": "9",
-      "name": "Chiroyeva Chioyli",
-      "username": "Chiroyeva",
-      "email": "Chiroyeva@gmail.com",
-      "group": "FRONTEND"
-    },
-        {
-      "id": "10",
-      "name": "Go'zaliyeva Go'zal",
-      "username": "o'ttago'zal",
-      "email": "go'zaliyev@gmail.com",
+      "username": "abbos",
+      "email": "abbosbek@gmail.com",
       "group": "BACKEND"
     }
-    ]
+  ]
 }
