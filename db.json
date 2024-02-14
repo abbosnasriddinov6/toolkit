@@ -1,18 +1,46 @@
 {
   "users": [
     {
-      "id": "d786",
-      "name": "Akobir Maxmaraimov",
-      "username": "akobirjon",
-      "email": "akobir003@gmail.com",
+      "id": "5841",
+      "name": "Husayn Hamdamov",
+      "username": "husaynjon",
+      "email": "husayn@gmail.com",
       "group": "FRONTEND"
     },
     {
-      "id": "89a0",
-      "name": "Abbosbek Nasriddinov",
-      "username": "abbos",
-      "email": "abbosbek@gmail.com",
-      "group": "BACKEND"
+      "id": "9dd7",
+      "name": "",
+      "username": "",
+      "email": "",
+      "group": ""
+    },
+    {
+      "id": "2b8c",
+      "name": "",
+      "username": "",
+      "email": "",
+      "group": ""
+    },
+    {
+      "id": "fdca",
+      "name": "asgasdg",
+      "username": "asdgasd",
+      "email": "asdgsdg",
+      "group": "IELTS"
+    },
+    {
+      "id": "9b55",
+      "name": "",
+      "username": "",
+      "email": "",
+      "group": ""
+    },
+    {
+      "id": "3120",
+      "name": "",
+      "username": "",
+      "email": "",
+      "group": ""
     }
   ]
 }

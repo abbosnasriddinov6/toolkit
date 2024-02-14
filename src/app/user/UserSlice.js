@@ -5,6 +5,7 @@ const initialState = {
     loading: false,
     users: [],
     error: null
+
 }
 
 export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
@@ -13,15 +14,15 @@ export const fetchUsers = createAsyncThunk('user/fetchUsers', () => {
         .then((str) => str.data)
         .catch((error) => error.message);
 });
-export const postUsers = createAsyncThunk('user/postUsers', (user) => {
-    return axios
-        .post('http://localhost:3000/users', user, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        })
-        .then((res) => res.data)
-        .catch((err) => err.message);
+export const postUsers = createAsyncThunk('user/postUsers', async (user) => {
+    
+    try {
+        const response = await axios.post(`http://localhost:3000/users`, user) 
+        const data = await response.data
+        return data
+    } catch (error) {
+        return rejectWithValue(error.message)
+    }
 });
 
 
@@ -78,8 +79,9 @@ const userSlice = createSlice({
             state.error = action.payload;
         });
 
+
     }
 })
 
-// export {fetchUsers}
+
 export default userSlice.reducer

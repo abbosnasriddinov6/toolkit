@@ -6,7 +6,7 @@ import './Hero.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchUsers, postUsers, deleteUsers } from '../app/user/UserSlice';
 import Loadingg from './Loadingg';
-const Hero = () => {
+const Hero = ({ data }) => {
   const [post, setpost] = useState(false)
   const { loading, users, error } = useSelector((state) => state.user);
   const dispatch = useDispatch();
@@ -51,18 +51,33 @@ const Hero = () => {
     setOpen(false);
   };
   const handleDeleteUser = (id) => {
-    
+    dispatch(fetchUsers())
     dispatch(deleteUsers(id));
+    console.log(id);
   };
 
-  console.log(users.length);
 
+
+
+
+  const [search, setSearch] = useState('')
+
+
+
+  // const searchMethod = (e) => {
+  //   const term = e.target.value;
+  //   setSearch(term)
+  //   const results = data.filter(item =>
+  //     item.name.toLowerCase().includes(term.toLowerCase())
+  //   );
+  //   setSearchResult(results);
+  // }
 
   return (
     <div className='Hero'>
       <div className='searchandfilter'>
         <div className='search'>
-          <input type="text" placeholder='Search . . .' />
+          <input type="text" onChange={(e) => setSearch(e.target.value)} placeholder='Search . . .' />
         </div>
         <div className='filteradd'>
           <select>
@@ -91,34 +106,32 @@ const Hero = () => {
 
           {loading ? <h2 className=""><Loadingg /></h2> : null}
           {error ? <h3 className="">{error}</h3> : null}
-          {users.length > 0 ? (
-            <tbody className='table'>
-              {users.map((user, index) => (
-                
-                <tr key={user.id} >
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.username}</td>
-                  <td>{user.email}</td>
-                  <td>{user.group}</td>
+          {users ? users.filter((pr) => {
+            if (search === '') {
+              return pr
+            } else if (pr.name.toLowerCase().includes(search.toLowerCase())) {
+              return pr
+            }
+          })
+
+            .map((s, index) => (
+              <tbody className="table">
+                <tr key={s.id}>
+                  <td> {index + 1}</td>
+                  <td>{s.name}</td>
+                  <td>{s.username}</td>
+                  <td>{s.email}</td>
+                  <td>{s.group}</td>
                   <td >
                     <div className='editdelete'>
-                      <button className='button2'>
-                        <RiEditFill />
-                      </button>
-                      <button className='button1' onClick={() => {
-                        handleDeleteUser(users[index ].id)
-                      }
-                      } >
-                        <AiFillDelete />
-                      </button>
+                      <button className='button1'>Edit</button>
+                      <button className='button2' onClick={() => handleDeleteUser(users[index].id)} >Delete</button>
                     </div>
                   </td>
                 </tr>
-              ))
-              }
-            </tbody >
-          ) : null}
+              </tbody>
+            ))
+            : null}
 
 
 
